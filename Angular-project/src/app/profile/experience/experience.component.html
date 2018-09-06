@@ -1,0 +1,58 @@
+<div *ngIf="exp_check">
+ <div class="card shade">
+    <div class="card-header text-primary">Experience</div>
+   <div class="card-body">
+     
+     Profile Id: {{getPost_Exp.profileId}}
+     <br> Organization name: {{getPost_Exp.organizationName}}
+     <br> Role: {{getPost_Exp.role}}
+     <br> Start date: {{getPost_Exp.startDate}}
+     <br> End date: {{getPost_Exp.endDate}}
+   </div>
+ </div>
+</div>
+
+<div class="modal fade" id="myModal3">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">Experience</h4>
+       <button class="close" data-dismiss="modal">&times;</button>
+
+     </div>
+     <!-- end modal-header -->
+     <div class="modal-body center-align">
+        <form class="form-horizontal" id="exp-form" (submit)="addPost_Exp()">
+          <div class="center-align">
+ 
+            <mat-form-field>
+              <input matInput placeholder="I previously worked in" [(ngModel)]="newPost_Exp.organizationName" name="org">
+            </mat-form-field>
+ 
+            <mat-form-field>
+              <input matInput placeholder="as a" [(ngModel)]="newPost_Exp.role" name="role">
+            </mat-form-field>
+ 
+            <mat-form-field>
+              <input matInput type="date" [matDatepicker]="picker" placeholder="I started on" [(ngModel)]="newPost_Exp.startDate" name="startDate">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+ 
+            <mat-form-field>
+              <input matInput type="date" [matDatepicker]="picker" placeholder="I worked till" [(ngModel)]="newPost_Exp.endDate" name="endDate">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div> <!-- end of center align -->
+          <hr>
+          <button class="btn btn-primary submitbtn" type="submit">Send</button> &nbsp;&nbsp;
+        </form>
+      </div>
+     <!-- end modal-body -->
+   </div>
+   <!-- end modal-content -->
+ </div>
+ <!-- end modal-dialog -->
+</div>
+<!-- end myModal -->

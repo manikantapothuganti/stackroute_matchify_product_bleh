@@ -1,0 +1,49 @@
+<div class="container profileSubmit">
+  <div class="card">
+    <div class="card-body">
+      <form class="form-horizontal" [formGroup]="userForm" (ngSubmit)="profileSubmit()">
+        <h4>Register</h4>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" formControlName="username" class="form-control" name=username/>
+          <div *ngIf="username.dirty && username.errors" class="error">
+            <div *ngIf="username.errors.required" class="validation_message">
+              Username required.
+            </div>
+            <div *ngIf="username.errors.usernameExists" class="validation_message">
+              Username already exists.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" class="form-control"  name="email" />
+          <div *ngIf="email.dirty && email.errors" class="error">
+            <div *ngIf="email.errors.required" class="validation_message"> 
+              Email required.
+            </div>
+            <div *ngIf="email.errors.email" class="validation_message">
+              Email not valid.
+            </div>
+            <div *ngIf="email.errors.emailExists" class="validation_message">
+              Email already exists.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" formControlName="password" minlength="8"/>
+          <div *ngIf="password.dirty && password.errors" class="error">
+            <div *ngIf="password.errors.required" class="validation_message">
+              Password required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-danger" [disabled]="userForm.invalid">Register</button>
+          <button class="btn" id="signUp" [routerLink]="['/login']">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

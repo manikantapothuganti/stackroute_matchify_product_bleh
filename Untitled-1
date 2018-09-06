@@ -1,0 +1,38 @@
+What is a Graph Database?
+Connected information is everywhere in the world around us. 
+Neo4j was built to efficiently store, handle, and query highly-connected data in your data model.
+With a powerful and flexible data model, you can represent your real-world, 
+variably-structured information without a loss of richness.
+
+
+
+
+Ontology: 
+
+a set of concepts and categories in a subject area or domain that shows their properties and the relations between them.
+
+
+now our core concept is match making, irrespective of domains, now the intelligence of our system partially 
+depends upon this ontology, and the doamin we choose to work on is skills set of a both intra and inter comapany employees
+in case u wanna change the domain , all u have to do is make an ontology by the specific doamin expert
+
+now we have created 4 ontologies , the main one being skill  ontology 
+
+[now i'll show the ontologiy and explain the nodes and partwholeof and same as relationships of skills 
+and tiers of city, uni and company]
+
+you can see all the skill nodes and their relationships, PART-WHOLE-OF relationship , now consider a person fills his 
+profile saying he knows spring boot, now to the human understanding its obvious that he also knows java, meaning java is 
+java is partwhole of spring boot, now this relationship depicts that, so when u search for a person who knows java, 
+persons who java also comes up , in the same way, consider angular, we know html, css, js is partwhole  of angular and that 
+angular is partwhole  of frontned technologies, so when the persons throws in a geniric search like "get me a front end 
+developer" based on the ontology our search can produce results intelligently, 
+its the same case with the relationship SAME AS, all the technologies which are same are connected throught this 
+relationship for example both angular and angular 2 are same, 
+
+now these same ontologies are used in autofill micro service, and 
+
+when the indexer is indexing profiles, it is designed in a way that the newly genrated profile id is assosicated
+pre existing nodes, this way a newly created node becomes a part of huge pre existing network making our search engine 
+rich and intelligent 
+

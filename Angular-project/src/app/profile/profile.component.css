@@ -1,0 +1,79 @@
+.profileSection {
+    margin-top: 30px;
+}
+
+#addProfile {
+    background: #00b3b3;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.drop li a:hover {
+    background: #00b3b3;
+    color: white;
+}
+
+.flex-container{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: stretch; */
+}
+
+.column {
+    flex: 30%;
+    max-width: 30%;
+    margin: 10px;
+}
+
+.column > * {
+    margin: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 40%;
+        max-width: 40%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.dropdown{
+    position: fixed;
+    bottom: 0;
+}
+button{
+    margin-bottom: 20px;
+    float: right;
+}
+#img1{
+    margin-top: 40px;
+    /* Half height */
+    height: 300px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img2{
+    width: 200px;
+    height: 200px; 
+    margin-top: -100px; 
+}
+
+.profileheader{
+  padding: 0;
+}
